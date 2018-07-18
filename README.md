@@ -40,7 +40,9 @@ $url = "http://apilayer.net/api/validate?access_key= CODIGO.........
 
 Si la herramienta ya no Genera la busqueda en la SHELL, CONSOLA o TERMINAL tienes que cargar otra API de la pagina https://numverify.com ...
 
-
+git clone   https://github.com/Leviatan3301/TrackPhoneNumber  
+cd TrackPhoneNumber
+perl Track_Phone_Number.pl 
                
                
         
