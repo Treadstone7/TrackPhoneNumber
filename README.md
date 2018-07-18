@@ -5,28 +5,28 @@ Es una herramienta para OSINT en numeros telefonicos, el cual funciona a nivel g
 
 #!/usr/bin/perl
 
-use if $^O eq "MSWin32", Win32::Console::ANSI; 
-use Getopt::Long;
-use HTTP::Request;
-use LWP::UserAgent;
-use IO::Select;
-use HTTP::Headers;
-use IO::Socket;
-use HTTP::Response;
-use Term::ANSIColor;
-use HTTP::Request::Common qw(POST);
-use HTTP::Request::Common qw(GET);
-use URI::URL;
-use IO::Socket::INET;
-use Data::Dumper;
-use LWP::Simple;
-use JSON qw( decode_json encode_json );
+if $^O eq "MSWin32", Win32::Console::ANSI          
+Getopt::Long                                    
+HTTP::Request                                    
+LWP::UserAgent                                  
+IO::Select                                    
+HTTP::Headers                                 
+IO::Socket                                     
+HTTP::Response                                
+Term::ANSIColor                                  
+HTTP::Request::Common qw(POST)                     
+HTTP::Request::Common qw(GET)                      
+URI::URL                                   
+IO::Socket::INET                                
+Data::Dumper                                   
+LWP::Simple                                      
+JSON qw( decode_json encode_json )                    
 
 ### Geolocaliza el numero
 
 sub  PhoneNumberInformation {
 
-  $url = "https://pastebin.com/raw/eimxvUhK"; ←←←←←←←←←  En este apartado se cargo una api de la pagina http://apilayer.net en https://numverify.com   
+  $url = "https://pastebin.com/raw/eimxvUhK"; ←←←←←←←←←  En este apartado se cargo una API de la pagina http://apilayer.net en https://numverify.com   
   
       $request = $ua->get($url);
       $api2 = $request->content;
