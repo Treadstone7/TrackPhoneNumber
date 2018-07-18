@@ -5,7 +5,7 @@ Es una herramienta para OSINT en numeros telefonicos, el cual funciona a nivel g
 
 #!/usr/bin/perl
 
-use if $^O eq "MSWin32", Win32::Console::ANSI;
+use if $^O eq "MSWin32", Win32::Console::ANSI; 
 use Getopt::Long;
 use HTTP::Request;
 use LWP::UserAgent;
@@ -26,7 +26,7 @@ use JSON qw( decode_json encode_json );
 
 sub  PhoneNumberInformation {
 
-  $url = "https://pastebin.com/raw/eimxvUhK"; ←←←←←←←←←  En estaparte se cargo una api de la pagina http://apilayer.net en https://numverify.com   
+  $url = "https://pastebin.com/raw/eimxvUhK"; ←←←←←←←←←  En este apartado se cargo una api de la pagina http://apilayer.net en https://numverify.com   
   
       $request = $ua->get($url);
       $api2 = $request->content;
@@ -35,10 +35,10 @@ sub  PhoneNumberInformation {
                $response = $request->content;
                if($response =~/"valid":true/)
                {
-# Nota puedes utilizar la herramienta con la API cargada en pastebin o solo colocandola
-# $url = "http://apilayer.net/api/validate?access_key= CODIGO.........
+Nota puedes utilizar la herramienta con la API cargada en pastebin o solo colocandola
+$url = "http://apilayer.net/api/validate?access_key= CODIGO.........
 
-# Si la herramienta ya no Genera la busqueda en la SHELL, CONSOLA o TERMINAL tienes que cargar otra API de la pagina https://numverify.com ...
+Si la herramienta ya no Genera la busqueda en la SHELL, CONSOLA o TERMINAL tienes que cargar otra API de la pagina https://numverify.com ...
 
 
                
